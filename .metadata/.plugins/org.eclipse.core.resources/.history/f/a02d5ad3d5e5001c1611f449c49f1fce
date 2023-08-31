@@ -1,0 +1,20 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class DSL {
+
+	private WebDriver driver;
+
+	public DSL(WebDriver driver) {
+		super();
+		this.driver = driver;
+	}
+
+
+
+	public void escreve() {
+		driver.findElement(By.id("elementosForm:nome")).sendKeys("Teste de escrita");
+
+	}
+
+}

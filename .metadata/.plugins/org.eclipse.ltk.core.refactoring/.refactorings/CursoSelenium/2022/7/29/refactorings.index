@@ -1,0 +1,4 @@
+1657738867891	Extract local variable 'text'
+1657894659676	Extract method 'obterIndiceColuna'
+1657894839921	Rename local variable 'colunaBusca'
+1657896454850	Extract method 'obterIndiceLinha'

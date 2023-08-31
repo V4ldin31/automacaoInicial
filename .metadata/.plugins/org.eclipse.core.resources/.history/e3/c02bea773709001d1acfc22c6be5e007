@@ -1,0 +1,154 @@
+package br.ce.wcaquino.core;
+import java.util.List;
+
+import org.junit.Assert;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+public class DSL {
+
+	private WebDriver driver;
+
+	public DSL(WebDriver driver) {
+		this.driver = driver;
+	}
+
+
+
+	public void escreve(String id_campo, String texto) {
+		driver.findElement(By.id(id_campo)).clear();
+		driver.findElement(By.id(id_campo)).sendKeys(texto);
+	}
+	
+		
+	public String obterValorCampo(String id_campo) {
+		return driver.findElement(By.id(id_campo)).getAttribute("value");
+	}
+	
+	
+	public void clicarRadioButon(By by) {
+		driver.findElement(by).click();
+	}
+	
+	public void clicarRadioButon(String id) {
+		clicarRadioButon(By.id(id));
+	}
+	
+	public boolean isRadioMarcado(String id) {
+		return driver.findElement(By.id(id)).isSelected();
+	}
+	
+	public void selecionarCombo(String id, String valorSelecionado) {
+		WebElement element =  driver.findElement(By.id(id));
+		Select combo = new Select(element);
+		combo.selectByVisibleText(valorSelecionado);
+	}
+	
+	
+	public String obterValorCombo(String id) {
+		WebElement element =  driver.findElement(By.id(id));
+		Select combo = new Select(element);
+		return combo.getFirstSelectedOption().getText();
+	}
+	
+	public void clicarBotao(String idBotao) {
+		driver.findElement(By.id(idBotao)).click();
+		
+	}
+	
+	public void clicarLink(String linkText) {
+		driver.findElement(By.linkText(linkText)).click();
+	}
+	
+	
+	
+	public String obterTexto(By by) {
+		return driver.findElement(by).getText();
+	}
+	
+	public String obterTexto(String id) {
+		return driver.findElement(By.id(id)).getText();
+	}
+	
+	public void mudarParaAlert() {
+		driver.switchTo().alert();
+		
+	}
+	
+	/********* JS ***********/
+	
+	public void executarJs(String cmd, Object...  param) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;	
+////		js.executeScript("alert('Testando Js via Selenium')");
+//		js.executeScript("document.getElementById('elementosForm:nome').value = 'Escrito via Js'");
+//		js.executeScript("document.getElementById('elementosForm:sobrenome').type = 'radio'");
+//		
+//		WebElement element = driver.findElement(By.id("elementosForm:nome"));
+		js.executeScript(cmd, param);
+	}
+	
+	
+	/*********** Frames e Janelas***************/
+	public void entrarFrame(String id_frame) {
+		driver.switchTo().frame(id_frame);
+	}
+	
+	public String alertaObterTextoEAceita() {
+		Alert alert = driver.switchTo().alert();
+		String msg =  alert.getText();
+		alert.accept();
+		return msg;
+	    
+	}
+		
+	/**********Tabela***********/
+	
+	public void clicarBotaTabela(String colunaBusca, String valor, String colunabotao, String idTabela) {
+		//Procurar Coluna do registro
+		WebElement tabela = driver.findElement(By.xpath("//*[@id='elementosForm:tableUsuarios']"));
+		int idColuna = obterIndiceColuna(colunaBusca, tabela);
+		
+		//Encontrar a linha do Registro
+		int idLinha = obterIndiceLinha(valor, tabela, idColuna);
+		
+		//Procurar coluna do botão
+		int idColunaBotao = obterIndiceColuna(colunabotao, tabela);
+		
+		//Clicar no botão da celula encontrada
+		WebElement celula = tabela.findElement(By.xpath(".//tr["+idLinha+"]/td["+idColunaBotao+"]"));
+		celula.findElement(By.xpath(".//input")).click();
+	}
+
+
+
+	protected int obterIndiceLinha(String valor, WebElement tabela, int idColuna) {
+		List<WebElement> linhas = tabela.findElements(By.xpath("./tbody/tr/td["+idColuna+"]"));
+		int idLinha = -1;
+		for(int i = 0; i < linhas.size(); i++) {
+			if(linhas.get(i).getText().equals(valor)) {
+				idLinha = i+1;
+				break;
+			}
+		}
+		return idLinha;
+	}
+
+
+
+	protected int obterIndiceColuna(String coluna, WebElement tabela) {
+		List<WebElement> colunas = tabela.findElements(By.xpath(".//th"));
+		int idColuna = -1;
+		for(int i = 0; i < colunas.size(); i++) {
+			if(colunas.get(i).getText().equals(coluna)) {
+				idColuna = i+1;
+				break;
+			}
+		}
+		return idColuna;
+	}
+
+}

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\Sempre IT\eclipse-workspace\CursoSeleniumOriginalNaoAlterar"/>
+			<item value="C:\Users\Sempre IT\eclipse-workspace"/>
+			<item value="C:\Users\Sempre IT\eclipse-workspace\BigColaborador"/>
+			<item value="C:\Users\Sempre IT\eclipse-workspace\SeleniumCurse"/>
+			<item value="C:\Users\Sempre IT\eclipse-workspace\SeleniumCurse\src\main\java\TesteCampoTreinamento.java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="ProjetoBacoffice"/>
+			<item value="Nei"/>
+			<item value="TesteAtoa"/>
+			<item value="Teste123"/>
+			<item value="NeiTeste"/>
+			<item value="ValidarPerfilGmail"/>
+			<item value="br.ce.wcaquino"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="ProjetoBacoffice"/>
+			<item value="Linkedin"/>
+			<item value="Facebook"/>
+			<item value="Teste123"/>
+			<item value="TestesYoutube"/>
+			<item value="ValidarPerfilGmail"/>
+			<item value="ProjetoBasico"/>
+			<item value="projetoBasico"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

@@ -1,0 +1,85 @@
+import java.util.List;
+
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+
+public class DesafioCadastroComSucesso {
+	
+private WebDriver driver;
+private DSL dsl;
+	
+	
+	@Before
+	public void inicializa(){
+	driver = new FirefoxDriver();
+	driver.manage().window().maximize();
+	driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+	dsl = new DSL(driver);
+	}
+
+
+	@After
+	public void finaliza() {
+		driver.close();
+	}
+	
+	@Test
+	public void testeTextField() {
+		dsl.escreve("elementosForm:nome","Ronaldinho");		
+//		driver.findElement(By.id("elementosForm:nome")).sendKeys("Ronaldinho");
+		
+		dsl.escreve("elementosForm:sobrenome","Gaucho");
+//		driver.findElement(By.id("elementosForm:sobrenome")).sendKeys("Gaucho");
+		
+		dsl.clicarRadioButon("elementosForm:sexo");
+//		driver.findElement(By.id("elementosForm:sexo:0")).click();
+		
+//		Assert.assertTrue(driver.findElement(By.id("elementosForm:sexo:0")).isSelected());
+//		driver.findElement(By.id("elementosForm:comidaFavorita:2")).click();
+//		Assert.assertTrue(driver.findElement(By.id("elementosForm:comidaFavorita:2")).isSelected());
+		
+		dsl.selecionarCombo("elementosForm:escolaridade", "Mestrado");
+		
+//		WebElement ComboEscolaridade = driver.findElement(By.id("elementosForm:escolaridade"));
+//		Select SelecionarEscolaridade = new Select(ComboEscolaridade);
+//		SelecionarEscolaridade.selectByVisibleText("Mestrado");
+		
+		// OU USAR A LINHA ABAIXO PARA SELECIONAR (MAIS SIMPLES)
+//		new Select(driver.findElement(By.id("elementosForm:escolaridade"))).selectByVisibleText("Mestrado");
+//		Assert.assertEquals("Mestrado", SelecionarEscolaridade.getFirstSelectedOption().getText());
+		
+		dsl.selecionarCombo("elementosForm:esportes", "Natacao");
+//		WebElement ComboEsporte = driver.findElement(By.id("elementosForm:esportes"));
+//		Select SelecionarEsporte = new Select(ComboEsporte);
+//		SelecionarEsporte.selectByVisibleText("Natacao");
+//		List<WebElement> allSelectedOptions = SelecionarEsporte.getAllSelectedOptions(); 
+//		Assert.assertEquals(1, allSelectedOptions.size());
+		
+		dsl.clicarBotao("elementosForm:cadastrar");
+//		driver.findElement(By.id("elementosForm:cadastrar")).click();
+		
+		Assert.assertTrue(dsl.obterTexto("resultado").startsWith("Cadastrado"));
+//		Assert.assertEquals("Cadastrado!", driver.findElement(By.id("resultado")).getText());
+//		Assert.assertTrue(driver.findElement(By.id("resultado")).getText().startsWith("Cadastrado"));
+
+		Assert.assertTrue(dsl.obterTexto("descNome").endsWith("Ronaldinho"));
+//		Assert.assertEquals("Nome: Ronaldinho", driver.findElement(By.id("descNome")).getText());
+//		Assert.assertTrue(driver.findElement(By.id("descNome")).getText().endsWith("Ronaldinho"));
+		
+		Assert.assertEquals("Sobrenome: Gaucho", dsl.obterTexto("descSobrenome"));
+		Assert.assertEquals("Sexo: Masculino", driver.findElement(By.id("descSexo")).getText());
+		Assert.assertEquals("Comida: Pizza", driver.findElement(By.id("descComida")).getText());
+		Assert.assertEquals("Escolaridade: mestrado", driver.findElement(By.id("descEscolaridade")).getText());
+		Assert.assertEquals("Esportes: Natacao", driver.findElement(By.id("descEsportes")).getText());
+		Assert.assertEquals("Sugestoes:", driver.findElement(By.id("descSugestoes")).getText());
+				
+	}
+}

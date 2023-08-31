@@ -1,0 +1,77 @@
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Login {
+	
+	@Test
+	
+	public void fazerLoginNoBig() throws InterruptedException {
+		WebDriver driver = new FirefoxDriver();
+//		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://stage-big-sempreit-front.azurefd.net/");
+		
+//		driver.switchTo().alert();
+		Thread.sleep(1000);
+		driver.findElement(By.id("i0116")).sendKeys("valdinei.souza@sempreit.com.br");
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//*[@id=\"idSIButton9\"]")).click();
+		
+		driver.findElement(By.id("i0118")).sendKeys("Tr1mundial");
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//*[@id=\"idSIButton9\"]")).click();
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("//*[@id=\"idDiv_SAOTCS_Proofs\"]/div[1]/div/div/div[2]")).click();
+		Thread.sleep(20000);
+		
+		driver.findElement(By.id("idChkBx_SAOTCC_TD")).click();
+		driver.findElement(By.id("idSubmit_SAOTCC_Continue")).click();
+		
+		Thread.sleep(1000);
+		
+		driver.findElement(By.id("KmsiCheckboxField")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.id("idSIButton9")).click();
+		
+		Thread.sleep(1000);
+		
+		driver.findElement(By.className("v-btn__content")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"inspire\"]/div[2]/nav/div[1]/div[2]/div/div[1]/div[1]/div[2]/div")).click();
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("(//*[contains(text(),'Carteira de Clientes')])[1]")).click();
+		Thread.sleep(5000);
+		
+		driver.findElement(By.xpath("//*[@id=\"inspire\"]/div/main/div/div/div/div/div[2]/header/div/button[2]")).click();
+		Thread.sleep(3000);
+
+		driver.findElement(By.id("input-180")).sendKeys("Ronaldinho Gaucho");
+		Thread.sleep(2000);
+		
+		driver.findElement(By.id("input-183")).click();
+		driver.findElement(By.xpath("//*[@id=\"cliente-list-item-215\"]")).click();
+		
+		driver.findElement(By.id("input-189")).click();
+		driver.findElement(By.xpath("//*[@id=\"automotivo-list-item-221\"]")).click();
+		
+		driver.findElement(By.id("input-204")).sendKeys("Rua do Teste");
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"tab-1\"]/div/div[2]/button[2]/span")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"tab-3\"]/div/div[3]/button[1]/span")).click();
+		
+//driver.close();
+		
+	}
+
+}

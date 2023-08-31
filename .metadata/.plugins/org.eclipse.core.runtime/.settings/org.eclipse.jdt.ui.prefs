@@ -1,0 +1,21 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="org.openqa.selenium.SearchContext"><rhs name\="org.openqa.selenium.chrome.ChromeDriver"/><rhs name\="org.openqa.selenium.firefox.FirefoxDriver"/></lhs><lhs name\="org.openqa.selenium.WebDriver"><rhs name\="org.openqa.selenium.chrome.ChromeDriver"/><rhs name\="org.openqa.selenium.firefox.FirefoxDriver"/></lhs><lhs name\="org.openqa.selenium.support.ui.ISelect"><rhs name\="org.openqa.selenium.support.ui.Select"/></lhs><lhs name\="org.openqa.selenium.support.ui.Select"><rhs name\="org.openqa.selenium.support.ui.Select"/></lhs><lhs name\="org.openqa.selenium.By"><rhs name\="org.openqa.selenium.By$ByClassName"/></lhs><lhs name\="java.lang.Enum"><rhs name\="java.util.concurrent.TimeUnit"/></lhs><lhs name\="java.lang.constant.Constable"><rhs name\="java.util.concurrent.TimeUnit"/></lhs><lhs name\="org.openqa.selenium.support.ui.FluentWait"><rhs name\="org.openqa.selenium.support.ui.WebDriverWait"/></lhs><lhs name\="org.openqa.selenium.support.ui.Wait"><rhs name\="org.openqa.selenium.support.ui.WebDriverWait"/></lhs><lhs name\="org.openqa.selenium.support.ui.WebDriverWait"><rhs name\="org.openqa.selenium.support.ui.WebDriverWait"/></lhs><lhs name\="org.junit.rules.TestWatcher"><rhs name\="org.junit.rules.TestName"/></lhs><lhs name\="org.junit.rules.TestRule"><rhs name\="org.junit.rules.TestName"/></lhs><lhs name\="org.junit.rules.TestName"><rhs name\="org.junit.rules.TestName"/></lhs><lhs name\="br.ce.wcaquino.core.BasePage"><rhs name\="br.ce.wcaquino.pages.ContasPage"/><rhs name\="br.ce.wcaquino.pages.MovimentacaoPage"/><rhs name\="br.ce.wcaquino.pages.MenuPage"/><rhs name\="br.ce.wcaquino.pages.ResumoPage"/></lhs><lhs name\="br.ce.wcaquino.pages.MenuPage"><rhs name\="br.ce.wcaquino.pages.MenuPage"/></lhs><lhs name\="br.ce.wcaquino.pages.ContasPage"><rhs name\="br.ce.wcaquino.pages.ContasPage"/></lhs><lhs name\="br.ce.wcaquino.pages.MovimentacaoPage"><rhs name\="br.ce.wcaquino.pages.MovimentacaoPage"/></lhs><lhs name\="BigCore.BaseTest"><rhs name\="BigPage.LoginPage"/><rhs name\="BigPage.HomePage"/></lhs><lhs name\="BigPage.LoginPage"><rhs name\="BigPage.LoginPage"/></lhs><lhs name\="BigPage.HomePage"><rhs name\="BigPage.HomePage"/></lhs><lhs name\="java.util.Collection"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.List"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.text.Format"><rhs name\="java.text.SimpleDateFormat"/></lhs><lhs name\="java.lang.Cloneable"><rhs name\="java.text.SimpleDateFormat"/></lhs><lhs name\="java.text.DateFormat"><rhs name\="java.text.SimpleDateFormat"/></lhs><lhs name\="br.ce.wcaquino.pages.ResumoPage"><rhs name\="br.ce.wcaquino.pages.ResumoPage"/></lhs><lhs name\="PacotePages.PaginaInicialPage"><rhs name\="PacotePages.PaginaInicialPage"/></lhs><lhs name\="Pages.LoginPage"><rhs name\="Pages.LoginPage"/></lhs><lhs name\="Pages.HomePage"><rhs name\="Pages.HomePage"/></lhs><lhs name\="PacotePages.ProdutosPage"><rhs name\="PacotePages.ProdutosPage"/></lhs><lhs name\="PacotePages.AdicionarProdutoPage"><rhs name\="PacotePages.AdicionarProdutoPage"/></lhs></history>
+content_assist_number_of_computers=12
+eclipse.preferences.version=1
+markOccurrences=false
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.formatterprofiles.version=22
+spelling_ignore_ampersand_in_properties=true
+spelling_ignore_digits=true
+spelling_ignore_java_strings=true
+spelling_ignore_mixed=true
+spelling_ignore_non_letters=true
+spelling_ignore_sentence=true
+spelling_ignore_single_letters=true
+spelling_ignore_upper=true
+spelling_ignore_urls=true
+spelling_locale_initialized=true
+spelling_user_dictionary_encoding=
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true
